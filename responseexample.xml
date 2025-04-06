@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RespuestaDisponibilidad xmlns="http://msp.gub.uy/respuestaReserva"
+	xmlns:et="http://msp.gub.uy/solicitudReserva"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://msp.gub.uy/respuestaReserva respuestaReserva.xsd
+						http://msp.gub.uy/solicitudReserva examType.xsd">
+	<solicitudID>REQ-56789</solicitudID>
+	<fechaHoraRespuesta>2025-04-06T12:00:00</fechaHoraRespuesta>
+
+	<!-- Institución 1 -->
+	<institucionSalud>
+		<institucion nombre="Hospital Central" codigo="HC001">
+			<ubicacion>
+				<departamento>Montevideo</departamento>
+				<localidad>Centro</localidad>
+				<calle>Av. Italia</calle>
+				<nroCalle>1234</nroCalle>
+			</ubicacion>
+		</institucion>
+		<respuestaExamen>
+			<tipoExamen codigo="TAC001" nombre="Tomografía Computada"
+				xmlns:et="http://msp.gub.uy/solicitudReserva" />
+			<equiposDisponibles>
+				<equipo id="EQ001">
+					<disponibilidad>
+						<fechaHora>2025-04-08T08:00:00</fechaHora>
+						<fechaHora>2025-04-08T09:30:00</fechaHora>
+					</disponibilidad>
+				</equipo>
+			</equiposDisponibles>
+		</respuestaExamen>
+	</institucionSalud>
+
+	<!-- Institución 2 -->
+	<institucionSalud>
+		<institucion nombre="Sanatorio del Sur" codigo="SS002">
+			<ubicacion>
+				<departamento>Canelones</departamento>
+				<localidad>Las Piedras</localidad>
+				<calle>18 de Julio</calle>
+				<nroCalle>567</nroCalle>
+			</ubicacion>
+		</institucion>
+		<respuestaExamen>
+			<tipoExamen codigo="RMN002" nombre="Resonancia Magnética"
+				xmlns:et="http://msp.gub.uy/solicitudReserva" />
+			<equiposDisponibles>
+				<equipo id="EQ002">
+					<disponibilidad>
+						<fechaHora>2025-04-09T10:00:00</fechaHora>
+						<fechaHora>2025-04-09T11:30:00</fechaHora>
+					</disponibilidad>
+				</equipo>
+				<equipo id="EQ003">
+					<disponibilidad>
+						<fechaHora>2025-04-10T14:00:00</fechaHora>
+					</disponibilidad>
+				</equipo>
+			</equiposDisponibles>
+		</respuestaExamen>
+		<respuestaExamen>
+			<tipoExamen codigo="ECO003" nombre="Ecografía Abdominal"
+				xmlns:et="http://msp.gub.uy/solicitudReserva" />
+			<equiposDisponibles>
+				<equipo id="EQ004">
+					<disponibilidad>
+						<fechaHora>2025-04-11T09:00:00</fechaHora>
+					</disponibilidad>
+				</equipo>
+			</equiposDisponibles>
+		</respuestaExamen>
+	</institucionSalud>
+</RespuestaDisponibilidad>

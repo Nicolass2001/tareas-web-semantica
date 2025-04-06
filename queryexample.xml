@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SolicitudReservaExamen xmlns="http://msp.gub.uy/solicitudReserva">
+    <tipoExamen>
+        <codigo>EX123</codigo>
+    </tipoExamen>
+    <tipoExamen>
+        <codigo>EX345</codigo>
+    </tipoExamen>
+</SolicitudReservaExamen>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://msp.gub.uy/respuestaReserva"
+    xmlns="http://msp.gub.uy/respuestaReserva" elementFormDefault="qualified">
+
+    <xs:include schemaLocation="./ubicationType.xsd" />
+
+    <xs:complexType name="InstitucionType">
+        <xs:sequence>
+            <xs:element name="ubicacion" type="UbicacionType" />
+        </xs:sequence>
+        <xs:attribute name="nombre" type="xs:string" use="required" />
+        <xs:attribute name="codigo" type="xs:string" use="required" />
+    </xs:complexType>
+
+</xs:schema>

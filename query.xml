@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://msp.gub.uy/solicitudReserva"
+	xmlns="http://msp.gub.uy/solicitudReserva" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="./examType.xsd" />
+
+	<xs:element name="SolicitudReservaExamen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tipoExamen" type="TipoExamenType" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
