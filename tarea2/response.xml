@@ -41,7 +41,6 @@
     <xs:element name="RespuestaDisponibilidad">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="solicitudID" type="xs:string" />
                 <xs:element name="fechaHoraRespuesta" type="xs:dateTime" />
                 <xs:element name="institucionSalud">
                     <xs:complexType>
@@ -53,6 +52,7 @@
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+            <xs:attribute name="solicitudID" type="xs:string" use="required" />
         </xs:complexType>
     </xs:element>
 

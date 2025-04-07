@@ -10,6 +10,7 @@
 			<xs:sequence>
 				<xs:element name="tipoExamen" type="TipoExamenType" maxOccurs="unbounded" />
 			</xs:sequence>
+			<xs:attribute name="solicitudID" type="xs:string" use="required" />
 		</xs:complexType>
 	</xs:element>
 
