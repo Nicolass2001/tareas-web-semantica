@@ -1,17 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://msp.gub.uy/respuestaReserva"
     xmlns="http://msp.gub.uy/respuestaReserva"
     xmlns:et="http://msp.gub.uy/solicitudReserva"
     elementFormDefault="qualified">
 
-    <xs:import namespace="http://msp.gub.uy/solicitudReserva" schemaLocation="./examType.xsd" />
+    <xs:complexType name="TipoExamenType">
+        <xs:attribute name="codigo" type="xs:string" use="required" />
+        <xs:attribute name="nombre" type="xs:string" use="required" />
+    </xs:complexType>
 
-    <xs:include schemaLocation="./institucionType.xsd" />
+    <xs:complexType name="UbicacionType">
+        <xs:sequence>
+            <xs:element name="departamento" type="xs:string" />
+            <xs:element name="localidad" type="xs:string" minOccurs="0" />
+            <xs:element name="calle" type="xs:string" />
+            <xs:element name="nroCalle" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="InstitucionType">
+        <xs:sequence>
+            <xs:element name="ubicacion" type="UbicacionType" />
+        </xs:sequence>
+        <xs:attribute name="nombre" type="xs:string" use="required" />
+        <xs:attribute name="codigo" type="xs:string" use="required" />
+    </xs:complexType>
+
 
     <xs:complexType name="ExamenResponseType">
         <xs:sequence>
-            <xs:element name="tipoExamen" type="et:TipoExamenType" />
+            <xs:element name="tipoExamen" type="TipoExamenType" />
             <xs:element name="equiposDisponibles">
                 <xs:complexType>
                     <xs:sequence>
